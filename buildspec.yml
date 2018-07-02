@@ -2,9 +2,9 @@ version: 0.1
 phases:
   install:
     commands:
-      - npm install time
-      - aws cloudformation package --template-file template.yaml --s3-bucket codepipeline-us-east-2-802118224578 --output-template-file template.yaml
+      - aws cloudformation package --template-file inTemplate.yaml --s3-bucket codepipeline-us-east-2-802118224578 --output-template-file outTemplate.yaml
 artifacts:
   type: zip
   files:
-    - template.yaml
+    - inTemplate.yaml
+    - outTemplate.yaml
