@@ -2,7 +2,6 @@ version: 0.1
 phases:
   install:
     commands:
-      - cp src/index.js build
       - aws cloudformation package --template-file inTemplate.yaml --s3-bucket codepipeline-us-east-2-802118224578 --output-template-file outTemplate.yaml
 artifacts:
   files:
