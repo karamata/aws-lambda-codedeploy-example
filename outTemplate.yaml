@@ -1,0 +1,10 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: A hello world application.
+Resources:
+  HelloWorldFunction:
+    Properties:
+      CodeUri: s3://codepipeline-us-east-2-802118224578/2b55b2105d503644153018c2d5aa45c9
+      Handler: index.handler
+      Runtime: nodejs6.10
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31
